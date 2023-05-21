@@ -8,7 +8,7 @@ import io
 
 ro = 'jmonti-gh'                  # repo_owner
 rn = 'Datasets'                   # repo_name
-zipfln = 'DataToVisualize..zip'
+zipfln = 'DataToVisualize.zip'
 dataset = 'iris.csv'
 
 url = f'https://raw.githubusercontent.com/{ro}/{rn}/main/{zipfln}'

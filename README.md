@@ -22,3 +22,19 @@ with zfm.ZipFile(io.BytesIO(r.content)) as zf:
 print(df.shape)
 df.iloc[[0, 9, -9, -1]]
 ```
+
+## -- If you are behind a proxy
+```python
+# Auth. required proxy
+proxies = {
+  'http': 'http://username:password@proxyIP:proxyPORT',
+  'https': 'https://username:password@proxyIP:proxyPORT'  # or 'http://username:password@proxyIP:proxyPORT'
+}
+
+# Simple proxy
+proxies = {
+  'http': 'http://proxyIP:proxyPORT',
+  'https': 'https://proxyIP:proxyPORT'  # or 'http://proxyIP:proxyPORT'
+}
+
+r = requests.get(url, proxies=proxies)
